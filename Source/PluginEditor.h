@@ -26,16 +26,7 @@ public:
     void resized() override;
 
 private:
-    void designKnob(AcoGui::SliderComponent& sliderComp, juce::Colour color = juce::Colours::white);
-
     juce::AudioProcessorValueTreeState& apvtsRef;
-
-    AcoGui::SliderComponent
-        mixSliderComponent{ apvtsRef, mix_id.getParamID() };
-
-    //Add Image before creating Button
-    AcoGui::AcoImageButtonComponent
-        bypassButtonComponent{ apvtsRef, bypass_id.getParamID() };
 
     AcoAudioProcessor& audioProcessor;
 

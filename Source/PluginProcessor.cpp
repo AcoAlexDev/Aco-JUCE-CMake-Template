@@ -22,8 +22,7 @@ AcoAudioProcessor::AcoAudioProcessor()
                        ), apvts(*this, nullptr, "Parameters", createParameterLayout())
 #endif
 {
-    bypassParameter = apvts.getRawParameterValue(bypass_id.getParamID());
-    mixParameter = apvts.getRawParameterValue(mix_id.getParamID());
+
 }
 
 AcoAudioProcessor::~AcoAudioProcessor()
@@ -140,18 +139,15 @@ void AcoAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::Mi
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    const float mixValue = mixParameter->load();
-
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
 
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
         {
-            const float rawInput = buffer.getSample(channel, sample);
-            float output = rawInput;
+            float inputSample = buffer.getSample(channel, sample);
 
-            channelData[sample] = (1.0f - mixValue) * rawInput + mixValue * output;
+            channelData[sample] = inputSample;
         }
     }
 }

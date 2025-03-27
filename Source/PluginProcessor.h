@@ -10,12 +10,7 @@
 
 #include <JuceHeader.h>
 
-const juce::ParameterID bypass_id = juce::ParameterID("bypass", 1);
-const juce::ParameterID mix_id = juce::ParameterID("Drive", 1);
 
-//==============================================================================
-/**
-*/
 class AcoAudioProcessor  : public juce::AudioProcessor
 {
 public:
@@ -56,33 +51,18 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
-    juce::AudioProcessorParameter* getBypassParameter() const override
-    {
-        return apvts.getParameter(bypass_id.getParamID());
-    }
-
 private:
     juce::AudioProcessorValueTreeState apvts;
-
-    std::atomic<float>
-        * bypassParameter,
-        * mixParameter;
 
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout()
     {
         juce::AudioProcessorValueTreeState::ParameterLayout layout;
 
-        layout.add(std::make_unique<juce::AudioParameterFloat>(mix_id, "Mix", juce::NormalisableRange<float>(0.f, 2.f, 0.01f), 0.f, juce::AudioParameterFloatAttributes().withStringFromValueFunction(stringFromPercent)));
-        layout.add(std::make_unique<juce::AudioParameterBool>(bypass_id, "Bypass", false));
+        //layout.add(std::make_unique<juce::AudioParameterFloat>("mix_id", "Mix", juce::NormalisableRange<float>(0.f, 1.f, 0.01f), 1.f);
 
         return layout;
     }
-
-    static juce::String stringFromPercent(float value, int)
-    {
-        return juce::String(int(100.f*value)) + "%";
-    }
-
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AcoAudioProcessor)
 };

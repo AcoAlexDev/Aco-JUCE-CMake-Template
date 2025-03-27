@@ -12,11 +12,8 @@ set(JUCE_PATH "C:/Users/User/Documents/JUCE")
 
 add_subdirectory(${JUCE_PATH} JUCE)
 
-set(CUSTOM_MODULES_PATH "C:/Users/User/OneDrive/Dokumente/JuceUserModules")
-
-juce_add_module(${CUSTOM_MODULES_PATH}/cmake_aco_universal_module_1)
-
-# include(${JUCE_PATH}/extras/Build/CMake/JucePluginFunctions.cmake)
+#set(CUSTOM_MODULES_PATH "C:/Users/User/Documents/JuceUserModules")
+#juce_add_module(${CUSTOM_MODULES_PATH}/my_juce_module)
 
 juce_add_plugin(TEMPLATE_PROJECT
     VERSION ${PROJECT_VERSION}
@@ -87,8 +84,8 @@ target_link_libraries(TEMPLATE_PROJECT
         juce::juce_gui_extra
         juce::juce_opengl
         juce::juce_product_unlocking
-        cmake_aco_universal_module_1
         AudioPluginData
+        #my_juce_module
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags

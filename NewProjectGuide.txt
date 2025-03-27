@@ -1,0 +1,9 @@
+Delete Build Folder
+Change CMakeLists.txt Indo in juce_add_plugin
+mkdir build
+cd build
+cmake -G "Visual Studio 16 2019" -A x64 ..
+cmake --build . --config Debug
+
+Alternatively:
+cmake --preset x64-debug

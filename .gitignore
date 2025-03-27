@@ -1,0 +1,22 @@
+# Build folders
+/build/
+/Builds/
+/JuceLibraryCode/
+
+# IDE files
+/.vs/
+/.vscode/
+/.idea/
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Compiled binaries
+*.dll
+*.exe
+*.dylib
+*.so
+*.a
+*.lib

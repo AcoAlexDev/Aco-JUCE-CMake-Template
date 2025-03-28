@@ -17,6 +17,7 @@ I have planned to publish a elaborated youtube tutorial on the template approx. 
 - Effortless Setup: Includes streamlined steps to get your project up and running with minimal hassle.<br>
 - Direct GitHub Integration: Ensures seamless compatibility and setup for GitHub repositories.<br>
 - Build Presets: Offers pre-configured debug and release presets for easy and efficient building, reducing the need for extensive terminal commands.<br>
+-Lightweight: Includes only the essential files needed, keeping the setup minimal and efficient.<br>
 
 
 ## File Overview

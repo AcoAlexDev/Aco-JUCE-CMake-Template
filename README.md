@@ -1,7 +1,7 @@
 # Juce CMake Template
 
 This template was created to simplify the process of creating new [JUCE](https://juce.com/) Projects with CMake support.<br>
-All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are not copied when crating new repository
+All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are not copied when crating new repository.
 
 It was developed on a Windows x64 PC using VSCode.<br>
 Compatibility with other operating systems, IDEs, or software is not guaranteed.<br>
@@ -10,6 +10,7 @@ Feel free to fork this repository and submit pull requests.<br>
 Contributions are especially welcome to improve compatibility while maintaining simplicity.<br>
 
 To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)
+I have planned to publish a elaborated youtube tutorial on the template approx. 1 month after release if some bugs persist now
 
 ## File Overview
 - CMakeLists.txt: Defines the build configuration for your JUCE project. This file includes paths, settings, and metadata necessary for compilation.<br>
@@ -106,27 +107,3 @@ The most widely-used and well documented template is probably [Pamplejuce](https
 Another template I can recommend is the [one by Wolfsound](https://github.com/JanWilczek/audio-plugin-template) with a [youtube tutorial](https://www.youtube.com/watch?v=Uq7Hwt18s3s) setup.
 
 If you want to create your fully own template have a look at [official JUCEs approach](https://github.com/juce-framework/JUCE/tree/master/examples/CMake/AudioPlugin)
-
-
-## License
-MIT License
-
-Copyright (c) 2025 AcoAlexDev
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

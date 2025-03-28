@@ -9,8 +9,8 @@ Compatibility with other operating systems, IDEs, or software is not guaranteed.
 Feel free to fork this repository and submit pull requests.<br>
 Contributions are especially welcome to improve compatibility while maintaining simplicity.<br>
 
-To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)
-I have planned to publish a elaborated youtube tutorial on the template approx. 1 month after release if some bugs persist now
+To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)<br>
+I have planned to publish a elaborated youtube tutorial on the template approx. 1 month after release if some bugs persist now.<br>
 
 ## File Overview
 - CMakeLists.txt: Defines the build configuration for your JUCE project. This file includes paths, settings, and metadata necessary for compilation.<br>

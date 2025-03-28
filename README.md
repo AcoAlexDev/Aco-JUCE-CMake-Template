@@ -1,7 +1,7 @@
 # Juce CMake Template
 
 This template was created to simplify the process of creating new [JUCE](https://juce.com/) Projects with CMake support.<br>
-All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are not copied when crating new repository.
+All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are not copied when creating a new repository.
 
 It was developed on a Windows x64 PC using VSCode.<br>
 Compatibility with other operating systems, IDEs, or software is not guaranteed.<br>
@@ -11,6 +11,13 @@ Contributions are especially welcome to improve compatibility while maintaining 
 
 To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)<br>
 I have planned to publish a elaborated youtube tutorial on the template approx. 1 month after release if some bugs persist now.<br>
+
+## Benefits
+- Simplicity: Designed to minimize complexity, making it beginner-friendly.<br>
+- Effortless Setup: Includes streamlined steps to get your project up and running with minimal hassle.<br>
+- Direct GitHub Integration: Ensures seamless compatibility and setup for GitHub repositories.<br>
+- Build Presets: Offers pre-configured debug and release presets for easy and efficient building, reducing the need for extensive terminal commands.<br>
+
 
 ## File Overview
 - CMakeLists.txt: Defines the build configuration for your JUCE project. This file includes paths, settings, and metadata necessary for compilation.<br>
@@ -53,6 +60,9 @@ Step 4: Update the following fields in CMakeLists.txt; Ensure that PLUGIN_CODE a
     FORMATS AU VST3 Standalone
     PRODUCT_NAME "TEMPLATE_PROJECT" // Should already be set by init_python.py
 
+Note:
+In CMakeLists.txt, experienced users have the flexibility to customize JUCE modules according to their project's needs. They can remove unnecessary modules, modify existing ones, or add new ones as required. This allows for a tailored setup that optimizes project functionality while keeping the configuration lightweight and efficient.
+
 ## Usage after Setup
 ### In VSCode:
 CMake automatically rebuilds on every save.<br>
@@ -60,6 +70,7 @@ Press Ctrl + Shift + P, select 'CMake Configure', then choose 'debug' to build.<
 
 ### In Visual Studio (How I'm doing it)
 CMake automatically rebuilds when saving within the file.<br>
+At the top of the window, make sure you select 'Standalone' to run.<br>
 Press F5 to build and execute the standalone. VST3 is automatically saved in the correct folder.<br>
 
 ## Adding Scripts

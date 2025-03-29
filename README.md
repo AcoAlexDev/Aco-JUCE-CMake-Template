@@ -1,24 +1,26 @@
 # Juce CMake Template
 
 This template was created to simplify the process of creating new [JUCE](https://juce.com/) Projects with CMake support.<br>
-All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are not copied when creating a new repository.
+All user irrelevant files (LICENSE.md, README.md, CONTRIBUTING.md, .gitattributes and .github/) are not copied when creating a new repository.
 
 It was developed on a Windows x64 PC using VSCode.<br>
 Compatibility with other operating systems, IDEs, or software is not guaranteed.<br>
 
 Feel free to fork this repository and submit pull requests.<br>
-Contributions are especially welcome to improve compatibility while maintaining simplicity.<br>
+Contributions aimed at enhancing compatibility while maintaining simplicity are especially welcome.<br>
 
 To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)<br>
-I have planned to publish a elaborated youtube tutorial on the template approx. 1 month after release if some bugs persist now.<br>
+I have planned to publish a elaborated youtube tutorial on this template approx. 1 month after release if some bugs persist now.<br>
 
 ## Benefits
 - Simplicity: Designed to minimize complexity, making it beginner-friendly.<br>
 - Effortless Setup: Includes streamlined steps to get your project up and running with minimal hassle.<br>
 - Direct GitHub Integration: Ensures seamless compatibility and setup for GitHub repositories.<br>
 - Build Presets: Offers pre-configured debug and release presets for easy and efficient building, reducing the need for extensive terminal commands.<br>
--Lightweight: Includes only the essential files needed, keeping the setup minimal and efficient.<br>
+- Lightweight: Includes only the essential files needed, keeping the setup minimal and efficient.<br>
+- Forever free: This template will **never** become closed software, come with a price or have limited features only without paying.<br>
 
+<br>
 
 ## File Overview
 - CMakeLists.txt: Defines the build configuration for your JUCE project. This file includes paths, settings, and metadata necessary for compilation.<br>
@@ -27,17 +29,20 @@ I have planned to publish a elaborated youtube tutorial on the template approx. 
 - init_project.py: Automatically configures CMakeLists.txt with your project name<br>
 - bypass_image.png: Example image to demonstrate how a BinaryData asset is added in CMakeLists.txt<br>
 
-## Setting up your own Template
-Step 0: Install [CMake](https://cmake.org/download/), [JUCE](https://juce.com/get-juce/) and [VSCode](https://code.visualstudio.com/download) / [Visual Studio](https://visualstudio.microsoft.com/vs/community/). Note: VS Studio has CMake support by default. One optional script needs [Python](https://www.python.org/downloads/)<br>
-Step 1: Copy this template with the green button on the top-right.<br>
-Step 2: Mark your newly created repository as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) in the repository settings.<br>
-Step 3: Download the repository and connect it to GitHub to modify the template.<br>
+<br>
 
-Next:
-### In CMakeLists.txt:
+## Setting up your own Template
+- Step 1:<br>
+    - Windows: Install [CMake](https://cmake.org/download/), [JUCE](https://juce.com/get-juce/) and [VSCode](https://code.visualstudio.com/download) / [Visual Studio](https://visualstudio.microsoft.com/vs/community/). Note: VS Studio has CMake support by default. One optional script needs [Python](https://www.python.org/downloads/)<br>
+    - MacOS: ...Waiting on contributors<br>
+- Step 2: Copy this template with the green button on the top-right.<br>
+- Step 3: Mark your newly created repository as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) in the - repository settings.<br>
+- Step 4: Download the repository and connect it to GitHub to modify the template.<br>
+
+**In CMakeLists.txt:**<br>
 Step 1: Change "C:/Users/User/Documents/JUCE" to your installed JUCE Folder Destination<br>
 
-Step 2: Replace all occurrences of information that remains the same.
+Step 2: Replace all occurrences of information that remains the same.<br>
 I suggest changing:
 
     COMPANY_NAME "Company" //Change your company details in Template
@@ -46,8 +51,9 @@ I suggest changing:
     COMPANY_WEBSITE "company.com"
     COMPANY_EMAIL "info@example.com"
 
-### Personalize it
+### Personalizing your template
 - Feel free to change the default PluginEditor.h / .cpp and PluginProcessor.h / .cpp scripts based on your needs.
+- Add your [custom juce modules](custom juce modules "Goto Custom Module")
 
 ## Create a new project
 Step 1: Use this or your template as a starting point.<br>

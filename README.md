@@ -33,7 +33,7 @@ I plan to publish an elaborate YouTube tutorial on this template approximately o
 
 ## Setting up your own Template
 - Step 1:<br>
-    - Windows: Install [CMake](https://cmake.org/download/), [JUCE](https://juce.com/get-juce/) and [VSCode](https://code.visualstudio.com/download) / [Visual Studio](https://visualstudio.microsoft.com/vs/community/). Note: VS Studio has CMake support by default. One optional script needs [Python](https://www.python.org/downloads/)<br>
+    - Windows: Install [JUCE](https://juce.com/get-juce/) and [Visual Studio](https://visualstudio.microsoft.com/vs/community/). Note: VS Studio has [CMake](https://cmake.org/download/) support by default. One optional script needs [Python](https://www.python.org/downloads/)<br>
     - MacOS: Currently seeking contributions to add MacOS setup instructions.<br>
 - Step 2: Copy this template with the green button on the top-right.<br>
 - Step 3: Mark your newly created repository as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) in the - repository settings.<br>
@@ -71,14 +71,20 @@ Note:
 In CMakeLists.txt, experienced users have the flexibility to customize JUCE modules according to their project's needs. They can remove unnecessary modules, modify existing ones, or add new ones as required. This allows for a tailored setup that optimizes project functionality while keeping the configuration lightweight and efficient.
 
 ## Usage after Setup
-### In VSCode:
-CMake automatically rebuilds on every save.<br>
-Press Ctrl + Shift + P, select 'CMake Configure', then choose 'debug' to build.<br>
-
-### In Visual Studio (How I'm doing it)
+### In Visual Studio
 CMake automatically rebuilds when saving within the file.<br>
-At the top of the window, make sure you select 'Standalone' to run.<br>
-Press F5 to build and execute the standalone. VST3 is automatically saved in the correct folder.<br>
+- Standalone:
+    - At the top of the window, make sure you select 'Standalone' to run.
+    - Press F5 to build and execute the standalone.
+- VST3 Plugin:
+    - Open Termnial ('Developer PowerShell')
+    - Insert these commands in order:
+
+        cd build
+        cmake -G "Visual Studio 17 2022" -A x64
+        cmake --build . --config Debug
+        
+    - The VST3 file is moved in the correct folder by default ("C:/Programs/Common Files/VST3/")
 
 ## Adding Scripts
 Place new scripts in Source/<br>

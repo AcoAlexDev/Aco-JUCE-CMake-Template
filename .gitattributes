@@ -1,5 +1,5 @@
-LICENSE.d export-ignore
+LICENSE.md export-ignore
 README.md export-ignore
-.gitignore export-ignore
 .gitattributes export-ignore
 CONTRIBUTING.md export-ignore
+.github/ export-ignore

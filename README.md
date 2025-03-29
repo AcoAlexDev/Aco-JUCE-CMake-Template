@@ -1,7 +1,7 @@
 # Juce CMake Template
 
 This template was created to simplify the process of creating new [JUCE](https://juce.com/) Projects with CMake support.<br>
-All user irrelevant files (LICENSE.md, README.md, CONTRIBUTING.md, .gitattributes and .github/) are not copied when creating a new repository.
+All user irrelevant files (LICENSE.md, README.md, .gitattributes and .github/) are deleted with an init_project.py script.
 
 It was developed on a Windows x64 PC using VSCode.<br>
 Compatibility with other operating systems, IDEs, or software is not guaranteed.<br>

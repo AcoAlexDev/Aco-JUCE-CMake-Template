@@ -9,8 +9,8 @@ Compatibility with other operating systems, IDEs, or software is not guaranteed.
 Feel free to fork this repository and submit pull requests.<br>
 Contributions aimed at enhancing compatibility while maintaining simplicity are especially welcome.<br>
 
-To learn more about CMake check the [TAP youtube explaination](https://www.youtube.com/watch?v=FLP_AVbzueY)<br>
-I have planned to publish a elaborated youtube tutorial on this template approx. 1 month after release if some bugs persist now.<br>
+To learn more about CMake check the [TAP YouTube explanation](https://www.youtube.com/watch?v=FLP_AVbzueY)<br>
+I plan to publish an elaborate YouTube tutorial on this template approximately one month after release, if any bugs persist.<br>
 
 ## Benefits
 - Simplicity: Designed to minimize complexity, making it beginner-friendly.<br>
@@ -18,13 +18,13 @@ I have planned to publish a elaborated youtube tutorial on this template approx.
 - Direct GitHub Integration: Ensures seamless compatibility and setup for GitHub repositories.<br>
 - Build Presets: Offers pre-configured debug and release presets for easy and efficient building, reducing the need for extensive terminal commands.<br>
 - Lightweight: Includes only the essential files needed, keeping the setup minimal and efficient.<br>
-- Forever free: This template will **never** become closed software, come with a price or have limited features only without paying.<br>
+- Forever free: This template will never become closed-source software, require payment, or offer limited features without payment.<br>
 
 <br>
 
 ## File Overview
 - CMakeLists.txt: Defines the build configuration for your JUCE project. This file includes paths, settings, and metadata necessary for compilation.<br>
-- .gitignore: Prevents large, unneeded files from being uploaded to Github<br>
+- .gitignore: Prevents large, unneeded files from being uploaded to GitHub<br>
 - CMakePresets.json: Instead of using tedious terminal commands, this file has two presets for debug and release export<br>
 - init_project.py: Automatically configures CMakeLists.txt with your project name<br>
 - bypass_image.png: Example image to demonstrate how a BinaryData asset is added in CMakeLists.txt<br>
@@ -34,7 +34,7 @@ I have planned to publish a elaborated youtube tutorial on this template approx.
 ## Setting up your own Template
 - Step 1:<br>
     - Windows: Install [CMake](https://cmake.org/download/), [JUCE](https://juce.com/get-juce/) and [VSCode](https://code.visualstudio.com/download) / [Visual Studio](https://visualstudio.microsoft.com/vs/community/). Note: VS Studio has CMake support by default. One optional script needs [Python](https://www.python.org/downloads/)<br>
-    - MacOS: ...Waiting on contributors<br>
+    - MacOS: Currently seeking contributions to add MacOS setup instructions.<br>
 - Step 2: Copy this template with the green button on the top-right.<br>
 - Step 3: Mark your newly created repository as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) in the - repository settings.<br>
 - Step 4: Download the repository and connect it to GitHub to modify the template.<br>
@@ -60,7 +60,7 @@ Step 1: Use this or your template as a starting point.<br>
 Step 2: Download template and connect it to GitHub.<br>
 Step 3: Run 'python init_project.py {PROJECT_NAME}' in the terminal to update CMakeLists.txt with project name details; 
 You can delete the python file afterward if desired.<br>
-Step 4: Update the following fields in CMakeLists.txt; Ensure that PLUGIN_CODE and PLUGIN_MANUFACTURER_CODE are unique, composed of four letters, with the first letter uppercase and the rest lowercase:
+Step 4: Update the following fields in CMakeLists.txt. Ensure that PLUGIN_CODE and PLUGIN_MANUFACTURER_CODE are unique, composed of four letters, with the first letter uppercase and the rest lowercase:
 
     PLUGIN_MANUFACTURER_CODE "Comp"
     PLUGIN_CODE "Aplg"
@@ -100,6 +100,8 @@ C:/Users/User/Documents/JUCE<br>
 ├── JUCE 7.08<br>
 └── JUCE 8<br>
 
+This prevents plugins from automatically using the latest JUCE version (if updated in this folder), which can lead to crashes or system changes caused by JUCE updates.
+
 ### Juce Namespace
 By default, building enables the JUCE namespace. To prevent this, I added a variable 'USE_JUCE_NAMESPACE' in CMakeLists.txt you can toggle to 'OFF'
 
@@ -115,7 +117,7 @@ And add my_module to the PRIVATE section in target_link_libraries:<br>
         PRIVATE
             juce::juce_audio_utils
             ...
-            my_custom_module)
+            my_module)
 
 ### Other Templates
 I know there are other templates for JUCE and CMake and I encourage you to have a look at them. 

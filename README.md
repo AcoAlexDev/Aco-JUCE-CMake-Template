@@ -78,13 +78,15 @@ CMake automatically rebuilds when saving within the file.<br>
     - Press F5 to build and execute the standalone.
 - VST3 Plugin:
     - Open Termnial ('Developer PowerShell')
-    - Insert these commands in order:
+    - Insert these commands in order:<br>
 
+```
         cd build
         cmake -G "Visual Studio 17 2022" -A x64
         cmake --build . --config Debug
-        
-    - The VST3 file is moved in the correct folder by default ("C:/Programs/Common Files/VST3/")
+```
+
+- The VST3 file is moved in the correct folder by default ("C:/Programs/Common Files/VST3/")
 
 ## Adding Scripts
 Place new scripts in Source/<br>

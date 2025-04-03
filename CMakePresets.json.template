@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "x64-debug-local",
+      "inherits": "x64-debug",
+      "displayName": "x64 Debug (Local JUCE)",
+      "cacheVariables": {
+        "FETCHCONTENT_SOURCE_DIR_JUCE": "C:/Path/To/Your/JUCE"
+      }
+    },
+    {
+      "name": "x64-release-local",
+      "inherits": "x64-release",
+      "displayName": "x64 Release (Local JUCE)",
+      "cacheVariables": {
+        "FETCHCONTENT_SOURCE_DIR_JUCE": "C:/Path/To/Your/JUCE"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "x64-debug-local",
+      "configurePreset": "x64-debug-local"
+    },
+    {
+      "name": "x64-release-local",
+      "configurePreset": "x64-release-local"
+    }
+  ]
+}

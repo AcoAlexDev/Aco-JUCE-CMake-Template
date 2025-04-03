@@ -20,3 +20,6 @@
 *.so
 *.a
 *.lib
+
+# CMake user presets (containing local paths)
+CMakeUserPresets.json

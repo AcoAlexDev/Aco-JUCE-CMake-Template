@@ -8,9 +8,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #VARIABLES
 set(USE_JUCE_NAMESPACE OFF)
-set(JUCE_PATH "C:/Users/User/Documents/JUCE")
+#set(JUCE_PATH "C:/Users/User/Documents/JUCE")
+include(FetchContent)
+FetchContent_Declare(
+    JUCE
+    GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
+    GIT_TAG 8.0.6  # Specify the version you want
+) 
+FetchContent_MakeAvailable(JUCE)
 
-add_subdirectory(${JUCE_PATH} JUCE)
+#add_subdirectory(${JUCE_PATH} JUCE)
 
 #set(CUSTOM_MODULES_PATH "C:/Users/User/Documents/JuceUserModules")
 #juce_add_module(${CUSTOM_MODULES_PATH}/my_juce_module)
